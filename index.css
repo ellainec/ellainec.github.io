@@ -1,4 +1,3 @@
-
 body{ 
 	font-family: 'Slabo 27px', serif;
 	margin: 0;
@@ -19,25 +18,25 @@ body{
 }
 
 #profile_pic{ 
-	max-width: 100%;
 	display: block;
 	margin: 0 auto;
+	max-width: 100%;
 }
 
 #about_me{ 
-	max-width: 700px;
 	display: block;
 	margin: 0 auto;
+	max-width: 700px;
 }
 
 #ellaine{ 
-	order: 2;
-	font-family: 'Rubik Mono One', sans-serif;
-	text-align: center;
-	width: 100%;
-	margin: 0 auto;
 	background: -webkit-linear-gradient(transparent, transparent), url('images/yarn.jpg') repeat;
 	color: #29006B;
+	font-family: 'Rubik Mono One', sans-serif;
+	margin: 0 auto;
+	order: 2;
+	text-align: center;
+	width: 100%;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color:transparent;
 }
@@ -55,35 +54,35 @@ body{
 }
 
 .nav{
-	width: 100%;
-	height: 35px;
 	background: linear-gradient(90deg, #E8CBC0, #636FA4, white);
+	height: 35px;
 	padding-top: 10px;
+	width: 100%;
 }
 
 #hamburger_menu{
-	order: 1;
-	margin-bottom: 5px;
 	display: none;
+	margin-bottom: 5px;
+	order: 1;
 	padding: 2px 2px 0 2px;
 }
 
 
 .nav ul{ 
 	list-style-type: none;
-	text-align: center;
-	padding: 0px; 
 	margin: 0px;
+	padding: 0px; 
+	text-align: center;
 	width: 100%
 }
 
 .nav li{ 
 	display: inline;
+	font-size: 14pt;
 	margin-right: 5%;
 	padding: 0px;
-	text-transform: uppercase;
-	font-size: 14pt;
 	text-align: center;
+	text-transform: uppercase;
 }
 
 .nav li a{
@@ -99,14 +98,14 @@ body{
 }
 		
 #banner { 
-	display: flex;
 	align-items: start;
-	text-align: justify;
 	background-color: white;
-	padding: 10px 0 20px 10px;
-	flex-wrap: wrap;
 	color: grey;
+	display: flex;
+	flex-wrap: wrap;
 	margin-bottom: 15px;
+	padding: 10px 0 20px 10px;
+	text-align: justify;
 }
 
 #banner h1{ 
@@ -116,17 +115,17 @@ body{
 .small { 
 	font-size: 11pt; 
 	font-style: italic;
+	margin: 10px auto 0 auto;
 	order: 3;
 	text-align: center;
 	width: 100%;
-	margin: 10px auto 0 auto;
 }
 
 h2 {
-	font-family: 'Rubik Mono One', sans-serif;
 	background: -webkit-linear-gradient(transparent, transparent), url('images/red.jpg') repeat;
-	text-align: center;
 	color: #5C0017;
+	font-family: 'Rubik Mono One', sans-serif;
+	text-align: center;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color:transparent;
 
@@ -134,13 +133,13 @@ h2 {
 
 
 .skill_level{ 
-	font-family: 'Rubik Mono One', sans-serif; 
-	padding-right: 20px;
-	font-size: 20pt;
-	height: 50px;
 	align-self: center;
 	color: #29006B;
 	background-image: -webkit-linear-gradient(transparent, transparent), url("images/blue.jpg") repeat;
+	font-family: 'Rubik Mono One', sans-serif;
+	font-size: 20pt;
+	height: 50px;
+	padding-right: 20px;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color:transparent;
 }
@@ -155,8 +154,8 @@ h2 {
 
 ul.no_bullet{
 	list-style-type: none;
-	padding-left: 10px;
 	margin: 0;
+	padding-left: 10px;
 	text-transform: uppercase;
 	
 }
@@ -170,11 +169,11 @@ ul.no_bullet li {
 }
 
 .skill_name{ 
-	text-align: center;
-	padding-top: 3px;
 	border: 1px dashed #042D65; 
-	width: 80px;
 	margin: 10px auto 15px auto;
+	padding-top: 3px;
+	text-align: center;
+	width: 80px;
 }
 
 #work_experience ul{ 
@@ -182,32 +181,32 @@ ul.no_bullet li {
 }
 
 .show.no { 
-		display: none;
+	display: none;
 	}
 
 button{ 
-	font-weight: bold;
-	font-size: 12pt;
-	display: block;
-	width: 120px;
-	margin: 30px auto 0 auto;
+	background-color: white; 
 	border: none; 
 	color: navy; 
-	background-color: white; 
+	display: block;
+	font-size: 12pt;
+	font-weight: bold;
+	margin: 30px auto 0 auto;
+	width: 120px;
 }
 
 @media screen and (max-width: 600px) { 
 	#ellaine { 
-		width: 245px;
 		margin: 0 auto;
+		width: 245px;
 	}
 	body { 
 		font-size: 14pt;
 	}
 	
 	#hamburger_menu { 
-		display: block;
 		align-self: flex-end;
+		display: block;
 	}
 	
 	.nav{ 
@@ -215,18 +214,18 @@ button{
 	}
 	
 	.nav.drop { 
-		display: block;
-		height: 250px;
 		background: white;
 		border: 1px solid #b9c1ce;
+		display: block;
+		height: 250px;
 		position: absolute; 
 		top: 95px;
 	}
 	
 	.nav.drop li{ 
 		display: block;
-		text-align: left; 
 		padding: 15px 0;
+		text-align: left; 
 	}
 	
 	.nav.drop li:first-child{ 
@@ -238,8 +237,8 @@ button{
 
 @media screen and (max-width: 800px){ 
 	.nav li{ 
-		margin-right: 2%;
 		font-size: 12pt;
+		margin-right: 2%;
 	}
 }
 
@@ -250,14 +249,14 @@ button{
 	}
 	#about_me{ 
 		max-width: 1000px;
+		min-height: 450px;
 		padding-bottom: 20px;
-		min-height: 450px
 	}
 	
 	.box-shadow { 
+		min-height: 200px;
 		padding: 3% 10%;
 		width: 80%;
-		min-height: 200px;
 	}
 	
 	.flex_large{ 
@@ -267,18 +266,18 @@ button{
 	}
 	
 	.max_width { 
-		max-width: 900px; 
 		margin-left: auto; 
 		margin-right: auto;
+		max-width: 900px; 
 	}
 	
 	.skill_name{ 
-		transform: rotate(-90deg); 
-		height: 30px;
-		font-size: 16pt;
-		padding: 10px 5px 5px 5px;
-		margin: 0;
 		align-self: center;
+		font-size: 16pt;
+		height: 30px;
+		margin: 0;
+		padding: 10px 5px 5px 5px;
+		transform: rotate(-90deg); 
 	}
 	.flex{ 
 		width: 85%;
