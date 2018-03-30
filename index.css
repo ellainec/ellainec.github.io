@@ -36,12 +36,10 @@ body{
 	text-align: center;
 	width: 100%;
 	margin: 0 auto;
-	background-image: url('images/yarn.jpg');
-	color: transparent;
+	background: -webkit-linear-gradient(transparent, transparent), url('images/yarn.jpg') repeat;
+	color: #29006B;
 	-webkit-background-clip: text;
-	background-clip: text;
 	-webkit-text-fill-color:transparent;
-	text-fill-color:transparent;
 }
 
 #work_experience ul{
@@ -126,14 +124,12 @@ body{
 
 h2 {
 	font-family: 'Rubik Mono One', sans-serif;
-	background-image: url('images/red.jpg');
+	background: -webkit-linear-gradient(transparent, transparent), url('images/red.jpg') repeat;
 	text-align: center;
+	color: #5C0017;
 	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	background-clip: text;
 	-webkit-text-fill-color:transparent;
-	-moz-text-fill-color:transparent;
-	text-fill-color:transparent;
+
 }
 
 
@@ -143,13 +139,10 @@ h2 {
 	font-size: 20pt;
 	height: 50px;
 	align-self: center;
-	background-image: url("images/blue.jpg");
+	color: #29006B;
+	background-image: -webkit-linear-gradient(transparent, transparent), url("images/blue.jpg") repeat;
 	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	background-clip: text;
 	-webkit-text-fill-color:transparent;
-	-moz-text-fill-color:transparent;
-	text-fill-color:transparent;
 }
 
 #work_experience p{ 
