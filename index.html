@@ -1,222 +1,94 @@
-<!DOCTYPE html> 
-<html lang="en">
-	<head> 
-		<title>Ellaine Chan</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="index.css">
-		<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet">
-	</head>
-	<body>
-		<div id="banner">
-			<div id="ellaine"><h1>Ellaine Chan</h1></div>
-			<div class="small">Novice coder, sourdough bread enthusiast and recovering yarn hoarder.</div>
-			<div onclick="menuDrop()" id="hamburger_menu"><img id="icon" src="images/menu-button.png"></div>
-		</div>
-		<div class="nav" id="myNav">
-			<ul>
-				<li><a onclick="hideMenu()" href="#about_me">About Me</a></li>
-				<li><a onclick="hideMenu()" href="#skills_div">Skills</a></li>
-				<li><a onclick="hideMenu()" href="#work_experience">Work Experience</a></li>
-				<li><a onclick="hideMenu()" href="#education">Education</a></li>
-				<li><a onclick="hideMenu()" href="#portfolio">Portfolio</a></li>
-			</ul>
-		</div>
-		<div id="container">
-		
-			<div id="about_me" class="box-shadow">
-				<h2>About me</h2>
-				
-				<img id="profile_pic" src="images/me.jpg">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Ellaine Chan home page
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #F0E9E4;
+            font-family: 'Nunito', sans-serif;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+<h1>
+    Ellaine Chan
+</h1>
+<h2>About me</h2>
+<p>
+    Hello, my name is Ellaine and I'm a software developer graduating from BCIT's Computer Systems Technology program (Data Communications option) in May 2020. During my 8 month co-op at Realtor.com I gained experience with developing back end services with Node.js and AWS, and React on the front end. Before I began my coding journey, I had graduated from Simon Fraser University with a Bachelor of Business Administration. I spent around 4 years helping a IT services company source, negotiate and manage their global vendors and contracts.
 
-				<p> Hello, my name is Ellaine and I’m a kick-ass coder.</p>
-				
-				<p>Ok, that’s a lie. I’m not <em>yet</em> but I plan to be. I’m currently enrolled in the Computer
-				Systems Technology program at BCIT. It's a tough program with a fast pace, but I'm loving every 
-				second of it.</p>
-				
-				<p>In my previous life (which wasn't too long ago I guess, but sure feels like it!), I had graduated 
-				from SFU with a Bachelor of Business Administration from Simon Fraser University. With that, I spent 
-				around 4 years helping a IT services company source, negotiate and manage their global vendors and 
-				contracts.</p>
-				
-				<p>When I'm not coding, you'll find me baking sourdough bread, crocheting a cup cozy, 
-				or knitting something like a scarf or hat. When the weather is warm, I might be outside 
-				satisfying my green thumb and tending to my vegetables. Having said this, I'd like to point out that I'm 
-				not 85 as my particular set of hobbies might hint otherwise.</p>
-			</div>
-
-			
-			<div id="skills_div" class="box-shadow">
-				<h2>Skills</h2>
-				
-				<div class="flex_large max_width">
-					<div class="skill_name">CODING</div>
-					<div class="flex" id="coding">
-						<div>
-							<ul class="no_bullet">
-								<li>Java</li>
-								<li>JavaScript</li>
-								<li>HTML5</li>
-								<li>CSS</li>
-								<li>Git/Github</li>
-							</ul>
-						</div>
-						<div class="skill_level">&lt;1YR</div>
-					</div>
-				</div>
-				
-				<div class="flex_large max_width">
-					<div class="skill_name">OTHER</div>
-					<div class="flex" id="other">
-						<div>
-							<ul class="no_bullet">
-								<li>Vendor Management</li>
-								<li>Strategic Sourcing</li>
-								<li>Talent Acquisition</li>
-								<li>Contract Management</li>
-								<li>Negotiation</li>
-								<li>Team Leadership</li>
-							</ul>
-						</div>
-						<div class="skill_level">~3YRS</div>
-					</div>
-				</div>
-			</div>
-			
-			<div id="work_experience" class="box-shadow">
-				<div class="max_width">
-					<h2>Work Experience</h2>
-						
-						<h3>Global Governance Manager, Vendor and Contract Management</h3>
-						<p>Appnovation Technologies, Vancouver BC</p>
-						<p>September 2015 - February 2018</p>
-						<ul>
-							<li>As Global Governance Manager, I was focused on improving and monitoring the quality of V&amp;C’s (Vendor and
-							Contract Management) global services to its internal customers within each region.</li>
-
-							<li>I oversaw the global team of regional Category Managers and provide guidance and support to ensure business 
-							requirements are met on time and on margin.</li>
-
-							<li>Provided training and leadership to Category Manager team in strategic sourcing, negotiation, contract 
-							reviews and vendor related issues.</li>
-
-							<li>Proactively sought after areas of improvement and implement operational controls to increase efficiency and 
-							service quality.</li>
-						
-							<li>Measured quality and performance and create related management reporting for V&amp;C.</li>
-						</ul>
-						
-						<h3>Category Manager, Vendor and Contract Management</h3>
-						<p>Appnovation Technologies, Vancouver BC</p>
-						<p>January 2015 - August 2015</p>
-						<ul>
-							<li>Sourced, created, and built relationships with vendors around the globe including North America, 
-							Europe, Asia and South America with a focus on IT services. </li>
-							<li>Negotiated terms and rates to acquire cost savings and ensure business requirements were met.</li>
-						</ul>
-						
-						<div id="more_experience" class="show no">
-							<h3>Operations Coordinator</h3>
-							<p>Appnovation Technologies, Vancouver BC</p>
-							<p>January 2014 - January 2015</p>
-							<ul>
-								<li>Responsible for identifying, vetting, negotiating and fulfilling contractor and vendor requests 
-								for all departments, but primarily for the Professional Services group.</li>
-								<li>Day-to-day activities include ongoing communication with vendors, administering contracts 
-								(NDA, MSA, SOW) and matching contractors with projects as per requirements provided by the delivery team.</li>
-								<li>Assist in all other areas of the Operations team as required, such as projecting the Operations cost 
-								for the fiscal year, keeping track of departmental spending, creating documents for Operations department 
-								procedures and processes, and occasional projects such as a new office build.</li>
-							</ul>
-
-								<h3>Data Management Coordinator (co-op term)</h3>
-								<p>Appnovation Technologies, Vancouver BC</p>
-								<p>September 2013 - December 2013</p>
-								<ul>
-									<li>Revamped the company's file repository system within Alfresco and managed the project from beginning 
-									to end.</li>
-									<li>Conducted interviews with each department head to gather requirements, designed new structures and 
-									procedures, and worked closely with an Alfresco developer to implement the improvements.</li> 
-									<li>Introduced the changes in a company wide presentation upon completion.</li>
-								</ul>
-							
-							<h3>Taxpayer Service Agent (co-op term)</h3>
-							<p>Canada Revenue Agency, Surrey BC</p>
-							<p>September 2012 - May 2013</p>
-							
-							<ul>
-								<li>Addressed taxpayer inquiries of their tax assessments and delivered timely and accurate answers by 
-								researching and analyzing information on internal databases.</li> 
-								<li>Overcame communication obstacles through the application of soft skills such as clarifying, 
-								paraphrasing, probing, and adaptation to different communication styles.</li>
-							</ul>
-							
-							<h3>Personal Banker</h3>
-							<p>HSBC</p>
-							<p>March 2011 - September 2012</p>
-							
-							<ul>
-								<li>Delivered exceptional and consistent customer service experience. Engaged in customer conversations 
-								to understand financial needs and identify sales opportunities.</li> 
-								<li>Prepared daily branch reports and balanced cash totals.</li>
-						</div>
-						<button type="button" onclick="showExperience()" value="Show More">Show More</button>
-					</div>
-			</div>
-				
-			<div id="education" class="box-shadow">
-				<div class="max_width">
-					<h2>Education</h2>
-						<h3>British Columbia Institute of Technology</h3>
-						<p>Diploma, Computer Systems Technology</p>
-						<p>January 2018 - December 2019 (expected)</p>
-					
-						<h3>Simon Fraser University</h3>
-						<p>Bachelor of Business Administration (B.B.A.), Management Information Systems and Operations Management</p>
-						<p>2009 - 2014</p>
-					</div>
-			</div>
-			
-			<div id="portfolio" class="box-shadow">
-				<h2>Portfolio</h2>
-				<h2>COMING SOON</h2>
-			</div>
-		<script>
-			function menuDrop(){ 
-				var navBar = document.getElementById("myNav"); 
-				var icon = document.getElementById("icon");
-				if (navBar.className === "nav") { 
-					  navBar.className += " drop"; 
-						icon.setAttribute("src", "images/exit.png");
-				} else { 
-					  navBar.className = "nav";
-						icon.setAttribute("src", "images/menu-button.png");
-				}
-			}
-			
-			function showExperience() { 
-				var experience = document.getElementById("more_experience"); 
-				var button = document.querySelector("button");
-				if (experience.className === "show") { 
-					experience.className += " no"; 
-					button.innerHTML = "Show More";
-				} else { 
-					experience.className = "show"; 
-					button.innerHTML = "Show Less";
-				}
-			}
-			
-			function hideMenu() { 
-				var navBar = document.getElementById("myNav");
-				navBar.className = "nav"; 
-				var icon = document.getElementById("icon");
-				icon.setAttribute("src", "images/menu-button.png");
-				
-			}
-				
-		</script>
-	</body>
+I have a fascination with electronics and I love learning about new components and building small circuits. In the near future I'd like to combine this knowledge with my other interest of data communications to build cool, connected things.
+</p>
+<table>
+    <tr>
+        <th>Courses (Winter 2020)</th>
+        <th>&nbsp;&nbsp;&nbsp;4711 Labs</th>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li>
+                    <a href="https://www.bcit.ca/study/outlines/20201047992">COMP 4711</a>
+                </li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>
+                    <a href="#">Lab 1</a>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li>
+                    <a href="https://www.bcit.ca/study/outlines/20201015508">COMP 4981</a>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li>
+                    <a href="https://www.bcit.ca/study/outlines/20201015509">COMP 4985</a>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li>
+                    <a href="https://www.bcit.ca/study/outlines/20201012716">BLAW 3600</a>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li>
+                    <a href="https://www.bcit.ca/study/outlines/20201086089">MATH 3042</a>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li>
+                    <a href="https://www.bcit.ca/study/outlines/20201073687">COMP 4735</a>
+                </li>
+            </ul>
+        </td>
+    </tr>
+</table>
+</body>
 </html>
-		
