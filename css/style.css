@@ -13,24 +13,82 @@ body {
     width: 600px;
 }
 
-input {
-    width: 500px;
-    margin-left: 50px;
+button {
+    background-color: #E0E0E0;
+    padding: 5px 8px;
+}
+
+form {
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+form button {
+    width: 100px;
+    padding: 8px 30px;
+    margin: auto;
+    display: block;
+}
+
+
+form input {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+.searchInput input {
+    width: 450px;
+    margin-right: 10px;
+    border-radius: 3px;
+    padding: 12px 20px;
+}
+
+.searchInput {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin-bottom: 20px;
+    align-items: center;;
 }
 #artistTitle {
     margin-left: 50px;
 }
 
+.artistCard {
+    display:flex;
+    flex-direction: row;
+    width: 450px;
+    align-items: center;
+}
+
 .artistBox{
-    width: 400px;
+    width: 375px;
     display:flex;
     padding: 10px;
     position: relative;
 }
 
+.deleteBtn {
+    background-color: #e60000;
+    color: white;
+    height: 30px;
+    width: 70px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
 .artistBox:hover {
     background-color: #E0E0E0;
+}
+
+.hide {
+    display: none;
 }
 img {
     margin-right: 10px;
@@ -42,13 +100,15 @@ img {
 .artistName {
     margin-bottom: 0px;
     margin-top: 5px;
+    font-size: 12pt;
 }
 
 .artistBio {
+    font-size: 10pt;
     margin: 0;
     position: absolute;
     top: 50%;
-    left: 100px;
+    left: 90px;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }

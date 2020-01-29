@@ -15,8 +15,18 @@
 <body>
     <div id="searchDiv" class="lightBorder">
         <h1 id="artistTitle">Artist Directory</h1>
-        <input/>
-     </div>
+        <div class="searchInput">
+          <input class="lightBorder"/>
+          <button class="lightBorder" onclick='toggleForm()'>Add Artist</button>
+        </div>
+    </div>
+     <form id="addForm" class="hide">
+        <input type="text" name="name" id="nameInput" placeholder="Name" size="40" />
+        <input type="text" name="about" id="aboutInput" placeholder="About" size="40" />
+        <input type="text" name="url" id="imgInput" placeholder="image url" />
+        <button id="addBtn" type="button" class="lightBorder">Add</button>
+     </form>
+
      <div id="artistList">
         
      </div>
