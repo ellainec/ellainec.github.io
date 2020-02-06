@@ -89,7 +89,6 @@ document.getElementById('addBtn').addEventListener('click', function() {
 })
 
 function searchArtists() {
-    //form.classList.toggle('hide');
     var input = document.getElementById("searchInput").value.toLowerCase();
     arrayOfArtists.forEach(artist => {
         if (artist.name.toLowerCase().search(input) > -1) {
