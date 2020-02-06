@@ -1,14 +1,23 @@
+let arrayOfArtists = JSON.parse(localStorage.getItem("artistArray"));
+if (arrayOfArtists) {
+    arrayOfArtists.forEach( artist => {
+        var artistCard = createArtistCard({name: artist.name, description: artist.description, img: artist.img, id: artist.id});
+        document.getElementById('artistList').appendChild(artistCard);
+    });
+} else {
+    localStorage.setItem("artistArray", "[]");
+}
+
 function createArtistCard(bio) {
     var div = document.createElement('div');
     div.classList.add("artistCard");
-    var uniqueId =  Date.now();
-    div.id = uniqueId;
+    div.id = bio.id;
     var artistBox = createArtistBox(bio);
     var deleteBtn = document.createElement('button');
     deleteBtn.innerText = "Delete";
     deleteBtn.classList.add("deleteBtn");
     deleteBtn.addEventListener('click', function() {
-        deleteArtist(uniqueId);
+        deleteArtist(bio.id);
     }, false);
     div.appendChild(artistBox);
     div.appendChild(deleteBtn);
@@ -46,22 +55,47 @@ function makeTextDiv(name, desc) {
 function toggleForm() {
     var form = document.getElementById('addForm');
     form.classList.toggle('hide');
+    document.getElementById('nameInput').value = "";
+    document.getElementById('aboutInput').value = "";
+    document.getElementById('imgInput').value = "";
 }
 
 function addArtist() {
-    console.log("hello");
     var name = document.getElementById('nameInput').value;
     var description = document.getElementById('aboutInput').value;
     var img = document.getElementById('imgInput').value;
-    var artistCard = createArtistCard({name, description, img});
+    var id = Date.now();
+    var artistCard = createArtistCard({name, description, img, id});
     document.getElementById('artistList').appendChild(artistCard);
+    let newArtist = { name, description, img, id };
+    //push new artist to localStorage
+    arrayOfArtists.push(newArtist);
+    localStorage.setItem("artistArray", JSON.stringify(arrayOfArtists));
 }
 
 function deleteArtist(id) {
     var artist = document.getElementById(id);
     document.getElementById('artistList').removeChild(artist);
+
+    arrayOfArtists = arrayOfArtists.filter(item => {
+        return item.id != id;
+    })
+    localStorage.setItem("artistArray", JSON.stringify(arrayOfArtists));
 }
 
 document.getElementById('addBtn').addEventListener('click', function() {
     addArtist();
+    toggleForm();
 })
+
+function searchArtists() {
+    //form.classList.toggle('hide');
+    var input = document.getElementById("searchInput").value.toLowerCase();
+    arrayOfArtists.forEach(artist => {
+        if (artist.name.toLowerCase().search(input) > -1) {
+            document.getElementById(artist.id).classList.remove("hide");
+        } else {
+            document.getElementById(artist.id).classList.add("hide");
+        }
+    })
+}
