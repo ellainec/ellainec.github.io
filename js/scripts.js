@@ -1,13 +1,19 @@
-let arrayOfArtists = JSON.parse(localStorage.getItem("artistArray"));
-if (arrayOfArtists) {
-    arrayOfArtists.forEach( artist => {
-        var artistCard = createArtistCard({name: artist.name, description: artist.description, img: artist.img, id: artist.id});
-        document.getElementById('artistList').appendChild(artistCard);
-    });
-} else {
-    localStorage.setItem("artistArray", "[]");
-}
+start();
 
+function getArtistArray() {
+    return JSON.parse(localStorage.getItem("artistArray"));
+}
+function start() {
+    let arrayOfArtists = getArtistArray();
+    if (arrayOfArtists) {
+        arrayOfArtists.forEach( artist => {
+            var artistCard = createArtistCard({name: artist.name, description: artist.description, img: artist.img, id: artist.id});
+            document.getElementById('artistList').appendChild(artistCard);
+        });
+    } else {
+        localStorage.setItem("artistArray", "[]");
+    }
+}
 function createArtistCard(bio) {
     var div = document.createElement('div');
     div.classList.add("artistCard");
@@ -68,7 +74,8 @@ function addArtist() {
     var artistCard = createArtistCard({name, description, img, id});
     document.getElementById('artistList').appendChild(artistCard);
     let newArtist = { name, description, img, id };
-    //push new artist to localStorage
+    //push new artist to 
+    let arrayOfArtists = getArtistArray();
     arrayOfArtists.push(newArtist);
     localStorage.setItem("artistArray", JSON.stringify(arrayOfArtists));
 }
@@ -76,7 +83,7 @@ function addArtist() {
 function deleteArtist(id) {
     var artist = document.getElementById(id);
     document.getElementById('artistList').removeChild(artist);
-
+    let arrayOfArtists = getArtistArray();
     arrayOfArtists = arrayOfArtists.filter(item => {
         return item.id != id;
     })
@@ -90,6 +97,7 @@ document.getElementById('addBtn').addEventListener('click', function() {
 
 function searchArtists() {
     var input = document.getElementById("searchInput").value.toLowerCase();
+    let arrayOfArtists = getArtistArray();
     arrayOfArtists.forEach(artist => {
         if (artist.name.toLowerCase().search(input) > -1) {
             document.getElementById(artist.id).classList.remove("hide");
